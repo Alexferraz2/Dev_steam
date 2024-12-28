@@ -75,7 +75,7 @@ export default function Home() {
   ];
 
   const filteredGames = games.filter(game =>
-    game.name.toLowerCase().includes(searchTerm)
+    game.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const games2 = [
@@ -102,7 +102,7 @@ export default function Home() {
   ];
 
   const filteredGames2 = games2.filter(game =>
-    game.name.toLowerCase().includes(searchTerm)
+    game.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   
