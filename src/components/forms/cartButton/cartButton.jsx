@@ -13,6 +13,8 @@ const CartButton = ( {cart, onRemove }) => {
                 className={styles.icon}
                 onClick={() => {setOpen(!open)}}
             />
+            {cart.length > 0 && <p className={styles.cartLength}>{cart.length}</p>}
+            
             {open && <CartMenu cart={cart} onRemove={onRemove}/>}
             
         </div>
