@@ -25,7 +25,11 @@ const CartMenu = ( { cart, onRemove }) => {
             <div className={styles.priceline}>
                 <h2>Total</h2>
                 {cart.length === 0 && <h2 className={styles.price}>R$ 0.00</h2>}
-                {cart.length > 0 && <h2 className={styles.price}>R$ {cart.reduce((acc, item) => acc + item.price, 0)}</h2>}
+                {cart.length > 0 && (
+                    <h2 className={styles.price}>
+                        {cart.reduce((acc, item) => acc + item.price, 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+                    </h2>
+                )}
                 
             </div>
             
